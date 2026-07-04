@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="上书书院 SHANGSHUSHUYUAN｜成都专业书法书院，校长邓黄涛，教师李凌云、贺嘉炜、李双促、张瑞霄、何伟、贺翊轩、贺西子，专注书法教育、碑帖欣赏、传统文化传承。">
+    <meta name="keywords" content="上书书院,邓黄涛,书法培训,成都书法,碑帖欣赏,李凌云,贺嘉炜,传统文化,书院教育">
+    <meta name="author" content="上书书院">
+    <title>上书书院 SHANGSHUSHUYUAN - 一笔一划，育才成林</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* 高级典雅+科技感配色 */
+            --primary: #2D3748;
+            --secondary: #8B5A2B;
+            --accent: #D4AF37;
+            --bg-light: #F8F5F0;
+            --bg-dark: #E8E0D0;
+            --text: #1A1A1A;
+            --border: #C4B098;
+            --shadow: rgba(0, 0, 0, 0.12);
+            --tech-gradient: linear-gradient(135deg, rgba(45, 55, 72, 0.05) 0%, rgba(212, 175, 55, 0.03) 100%);
+        }
+
+        body {
+            font-family: "Noto Serif SC", "STKaiti", serif;
+            background-color: var(--bg-light);
+            /* 科技感纹理背景 */
+            background-image: 
+                var(--tech-gradient),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23C4B098' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav {
+            width: 100%;
+            padding: 25px 0;
+            border-bottom: 2px solid var(--border);
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-light);
+            z-index: 99;
+            box-shadow: 0 2px 15px var(--shadow);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* 院徽样式 - 匹配新LOGO */
+        .yuanhui {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid var(--secondary);
+            padding: 5px;
+            object-fit: cover;
+            background-color: var(--bg-light);
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--secondary);
+            letter-spacing: 4px;
+        }
+
+        .logo-eng {
+            font-size: 12px;
+            color: var(--secondary);
+            opacity: 0.8;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 17px;
+            position: relative;
+            padding-bottom: 5px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .page {
+            display: none;
+            padding: 60px 0;
+            min-height: calc(100vh - 220px);
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        /* 书法标题 - 无缝融入背景 */
+        .calligraphy-title {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-light);
+            padding: 20px 0;
+        }
+
+        .calligraphy-title img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .hero-desc {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 20px auto 40px;
+            letter-spacing: 2px;
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 40px;
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            font-size: 17px;
+            transition: all 0.3s;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(139, 90, 43, 0.2);
+        }
+
+        .shangshu-fu {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 20px var(--shadow);
+            border-radius: 4px;
+        }
+
+        .fu-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .fu-content {
+            font-size: 16px;
+            line-height: 2.2;
+            text-align: justify;
+            white-space: pre-line;
+            color: var(--primary);
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: var(--secondary);
+            letter-spacing: 4px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-left: 3px solid var(--border);
+            padding-left: 40px;
+            font-size: 18px;
+            line-height: 2;
+            color: var(--primary);
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .courses-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .course-card {
+            width: 320px;
+            padding: 40px 30px;
+            border: 1px solid var(--border);
+            background: var(--bg-light);
+            transition: 0.4s;
+            box-shadow: 0 5px 15px var(--shadow);
+            border-radius: 4px;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent);
+        }
+
+        .course-card h3 {
+            font-size: 22px;
+            color: var(--secondary);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .course-card p {
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--primary);
+        }
+
+        .course-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .course-detail h3 {
+            font-size: 28px;
+            color: var(--secondary);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .course-detail p {
+            font-size: 18px;
+            line-height: 2;
+            margin-bottom: 18px;
+            color: var(--primary);
+        }
+
+        /* 教师团队 8人独立展示 */
+        .teachers-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .teacher-item {
+            border: 2px solid var(--border);
+            padding: 30px;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 6px 18px var(--shadow);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .teacher-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .teacher-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 3px solid var(--secondary);
+            object-fit: cover;
+            background: var(--bg-dark);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .teacher-photo:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+        }
+
+        .teacher-item h3 {
+            font-size: 22px;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .teacher-item .title {
+            font-size: 15px;
+            opacity: 0.8;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .teacher-item .intro {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--primary);
+        }
+
+        /* 图片网格：学员100个 / 碑帖500个 位置 */
+        .grid-100, .grid-500 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .grid-item {
+            width: 100%;
+            height: 320px;
+            border: 2px solid var(--border);
+            object-fit: cover;
+            background: var(--bg-dark);
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.03);
+            border-color: var(--accent);
+            box-shadow: 0 8px 20px var(--shadow);
+        }
+
+        .upload-box {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            border: 2px dashed var(--secondary);
+            text-align: center;
+            background: var(--bg-dark);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .upload-box:hover {
+            border-color: var(--accent);
+            background: rgba(232, 224, 208, 0.8);
+        }
+
+        .upload-box input {
+            display: none;
+        }
+
+        .contact-card {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            text-align: center;
+            font-size: 18px;
+            line-height: 2.4;
+            border-radius: 4px;
+            color: var(--primary);
+        }
+
+        /* 报名页面样式 */
+        .signup-form {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            box-shadow: 0 8px 20px var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 16px;
+            background: #fff;
+            color: var(--primary);
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* 密码弹窗样式 */
+        .password-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .modal-content .btn {
+            width: 100%;
+        }
+
+        .footer {
+            border-top: 2px solid var(--border);
+            padding: 50px 0;
+            text-align: center;
+            background: var(--bg-dark);
+            margin-top: 60px;
+            color: var(--primary);
+        }
+
+        .footer h3 {
+            font-size: 24px;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            opacity: 0.9;
+            margin: 6px 0;
+        }
+
+        @media (max-width:768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .grid-item {
+                height: 260px;
+            }
+            .signup-form {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 管理员密码弹窗 -->
+    <div class="password-modal" id="passwordModal">
+        <div class="modal-content">
+            <h3>管理员验证</h3>
+            <input type="password" id="adminPwd" placeholder="请输入管理员密码">
+            <button class="btn" onclick="checkPassword()">验证</button>
+        </div>
+    </div>
+
+    <!-- 导航 -->
+    <div class="nav">
+        <div class="container nav-content">
+            <div class="logo-wrapper">
+                <!-- 替换为第二张LOGO图片 -->
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/4fff40ebf500403086d5b8a259ff6d62.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=uzsbPU5bqNKTDGxmSiMbtA2sV8U%3D" alt="上书书院院徽" class="yuanhui">
+                <div class="logo">
+                    <div class="logo-main">上书书院</div>
+                    <div class="logo-eng">SHANGSHUSHUYUAN</div>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a onclick="show('home')">首页</a>
+                <a onclick="show('about')">书院简介</a>
+                <a onclick="show('courses')">课程体系</a>
+                <a onclick="show('teachers')">教师介绍</a>
+                <a onclick="show('students')">学员风采</a>
+                <a onclick="show('beitie')">碑帖欣赏</a>
+                <a onclick="show('contact')">联系我们</a>
+                <a onclick="show('signup')">报名通道</a> <!-- 新增报名页面导航 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 首页 -->
+    <div id="home" class="page active container">
+        <div class="hero">
+            <!-- 替换为第一张上书书院书法字图片 -->
+            <div class="calligraphy-title">
+                <img src="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3f87bead6ef544159f1bd0d785e80a51.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=NA2CrgHit07wEo0yMS1c1pzEUDY%3D" alt="上书书院">
+            </div>
+            <p class="hero-desc">一笔一划，育才成林</p>
+            <button class="btn" onclick="show('signup')">立即报名</button>
+
+            <div class="shangshu-fu">
+                <h3 class="fu-title">上书赋</h3>
+                <div class="fu-content">
+荡荡乎府南瀄汩，巍巍乎八岫嵯峨。古蜀地有奇盛之所，名曰上书。上书者，秉衷心以传教，抱孤诣而阐猷。洙泗遗躅，未绝弦歌之响；仓颉玄迹，犹存籀篆之芒。睢盱庭宇之邃邈，游目庑廊之弘敞。负笈之俦，斐然成风，骎骎兮向道。院主邓公，才貌堂堂。一管霜毫，写尽古今麟阁之韵；半螺丹砂，批罢寰宇鳣堂之章。砥柱中流，逆俗流而独守渊襟；传薪弗辍，顺文脉而浮荣罔浼。
+仿若古贤懿范，尤见襟怀。昔右军搦管，契一室形骸之悟；张颠濡墨，恣醉呼解衣之狂。摹《滕王》之序兮怆然兴尽悲来；临《袁安》之碑兮凛乎气振骨鲠。颜公祭侄，举族殁而忠骨昭彰；东坡牍行，州府治而闾阎均乂。书院承兹，岂独炫技骋妍？更教濡墨修身，养浩然于方寸；秉笔立骨，树砥柱于蒿莱。桃李各成，遍及天下，铁画银钩，远脱匠气之鄙；清刚雅健，尽是君子之风。
+至若授业之精微，迥迈常伦。析波磔于黍累，剖锋杪于分毫。振管则风霆劘切于楮素，落纸则鸾鹄颉颃于云笺。素缯展雪，恍睹银钩初诞于混茫；紫颖蘸渖，俄惊渴骥奔泉于坰野。点若崩崖坠雹，趯同犷弩激镞，竖作寒松垂霤，捺成滭汩决川。腕底风雷隐隐，楮间螭虬蜿蟺。
+於乎，盛哉！玄元吐曜，河岳钟灵。觚翰既兴，斯文此庭。上书弘道，薪传有继。墨海扬舲，心灯永铭。笔参造化，纸纳沧溟。来者何人？叩此玄扃！
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 书院简介 -->
+    <div id="about" class="page container">
+        <h2 class="section-title">书院简介</h2>
+        <div class="about-content">
+            <p>上书书院坐落于成都成华区，以传承中华书道、弘扬传统文化为使命，集书法教学、碑帖研究、文化传播于一体，文风古朴，气韵苍劲。</p>
+            <p>书院由校长邓黄涛领衔，汇聚李凌云、贺嘉炜、李双促、张瑞霄、何伟、贺翊轩、贺西子七位名师，秉持正统书学理念，因材施教，德艺同育。</p>
+            <p>书院环境清雅，藏历代碑帖珍品，设专业教学空间，是研习书法、修身养性、传承文脉之圣地。</p>
+        </div>
+    </div>
+
+    <!-- 课程体系 -->
+    <div id="courses" class="page container">
+        <h2 class="section-title">课程体系</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <h3>酣游书史</h3>
+                <p>书法史籍、源远流长，口传心授，浸润于心</p>
+                <button class="btn" onclick="show('c1')">查看详情</button>
+            </div>
+            <div class="course-card">
+                <h3>书法笔墨</h3>
+                <p>笔走龙蛇，临帖习字，修身养性</p>
+                <button class="btn" onclick="show('c2')">查看详情</button>
+            </div>
+            <div class="course-card">
+                <h3>文化讲堂</h3>
+                <p>圣贤智慧，古今贯通，明理知行</p>
+                <button class="btn" onclick="show('c3')">查看详情</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="c1" class="page container"><div class="course-detail"><h3>酣游书史</h3><p>通史教学，溯源甲骨、金文、简牍、楷书、行书、草书，系统学习三千年书法流变。</p><button class="btn" onclick="show('courses')">返回</button></div></div>
+    <div id="c2" class="page container"><div class="course-detail"><h3>书法笔墨</h3><p>执笔、运笔、结构、章法、临摹、创作，从入门到精通，技道双修。</p><button class="btn" onclick="show('courses')">返回</button></div></div>
+    <div id="c3" class="page container"><div class="course-detail"><h3>文化讲堂</h3><p>诗词文赋、哲学礼仪、碑帖品鉴、文人精神，全面提升文化修养。</p><button class="btn" onclick="show('courses')">返回</button></div></div>
+
+    <!-- 教师介绍 8人完整版（已绑定指定照片） -->
+    <div id="teachers" class="page container">
+        <h2 class="section-title">教师介绍</h2>
+        <div class="teachers-box">
+            <div class="teacher-item">
+                <!-- 邓黄涛 - 第三张照片 -->
+                <img class="teacher-photo" src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/22dc2176bfb2424f822119b06ab580f3.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=Su2n4BQVp%2BA0ywohFXimGR7ga6A%3D" onclick="openAdminUpload(this)">
+                <h3>邓黄涛</h3>
+                <div class="title">校长 / 创始人</div>
+                <div class="intro">深耕书道数十载，通诸体，精鉴赏，重育人，文风苍古浑厚。</div>
+            </div>
+            <div class="teacher-item">
+                <!-- 李凌云 - 第四张照片 -->
+                <img class="teacher-photo" src="https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/8aa4a08ce8094de39d04ac281ccc3c37.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=cO4l2lt3JthkP8afQjrHgBD5jqU%3D" onclick="openAdminUpload(this)">
+                <h3>李凌云</h3>
+                <div class="title">鉴微堂</div>
+                <div class="intro">精楷隶，笔法严谨，教学细致，尤擅基础体系构建。</div>
+            </div>
+            <div class="teacher-item">
+                <!-- 贺嘉炜 - 第五张照片 -->
+                <img class="teacher-photo" src="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/8e9e8087dc62491aac1a27289882f4ed.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=1LmoHe624X0aY7PD%2Bi6Z6NiBIM8%3D" onclick="openAdminUpload(this)">
+                <h3>贺嘉炜</h3>
+                <div class="title">桃庐</div>
+                <div class="intro">主攻行草，气韵灵动，风格潇洒，教学重神韵与性情。</div>
+            </div>
+            <div class="teacher-item">
+                <!-- 李双促 - 第六张照片 -->
+                <img class="teacher-photo" src="https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/9cb4f5ecaa444e1fb781f30b7dfd5975.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=NiC0VXP0%2FRDJNWIlSbD0FinmpDU%3D" onclick="openAdminUpload(this)">
+                <h3>李双促</h3>
+                <div class="title">涵庐</div>
+                <div class="intro">篆隶功底深厚，古朴典雅，注重笔墨气息与文化内涵。</div>
+            </div>
+            <div class="teacher-item">
+                <!-- 张瑞霄 - 第七张照片 -->
+                <img class="teacher-photo" src="https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/e77f60714b47415ca7a780d4dafcee29.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=r1Vmp%2ByMPnhKrlYYy9lxYcCrCGs%3D" onclick="openAdminUpload(this)">
+                <h3>张瑞霄</h3>
+                <div class="title">砺渊堂</div>
+                <div class="intro">诸体兼修，理论扎实，教学系统，风格沉稳端正。</div>
+            </div>
+            <div class="teacher-item">
+                <!-- 何伟 - 第八张照片 -->
+                <img class="teacher-photo" src="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/bc6bb238e289486abf95152a131f1fd5.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=OX8rHP1DtgyV7XzApWxZOXOZNGw%3D" onclick="openAdminUpload(this)">
+                <h3>何伟</h3>
+                <div class="title">专职教师</div>
+                <div class="intro">擅长楷书与临摹教学，耐心细致，深受学员喜爱。</div>
+            </div>
+            <div class="teacher-item">
+                <!-- 贺翊轩 - 第九张照片 -->
+                <img class="teacher-photo" src="https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/1d3698d27da24172bd2a2d740375f54a.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=2OAPM9PvsgY9IbX14CvfBytkWj8%3D" onclick="openAdminUpload(this)">
+                <h3>贺翊轩</h3>
+                <div class="title">庚堂</div>
+                <div class="intro">精研碑学，笔力雄健，教学重骨力、结构与法度。</div>
+            </div>
+            <div class="teacher-item">
+                <!-- 贺西子 - 第十张照片 -->
+                <img class="teacher-photo" src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/ae12387962044f0da567b37cddb42539.jpg~tplv-a9rns2rl98-24:720:720.jpeg?lk3s=8e244e95&rcl=2026070414025442C8DDEDF480766812B5&rrcfp=d52e923b&x-expires=1783749774&x-signature=ldAWtqeYUQ1MjxE6lDOf2By7V%2Fk%3D" onclick="openAdminUpload(this)">
+                <h3>贺西子</h3>
+                <div class="title">专职教师</div>
+                <div class="intro">温婉清雅，行书秀丽，教学注重审美与心性培养。</div>
+            </div>
+        </div>
+        <div class="upload-box"><button class="btn" onclick="openAdminBatchUpload()">批量上传教师照片</button><input type="file" id="file-teacher" accept="image/*" onchange="setImg('.teacher-photo',this)" style="display:none"></div>
+    </div>
+
+    <!-- 学员风采 100个位置 -->
+    <div id="students" class="page container">
+        <h2 class="section-title">学员风采（100图位）</h2>
+        <div class="grid-100" id="sbox"></div>
+        <div class="upload-box"><button class="btn" onclick="openAdminBatchUpload('stu')">上传学员照片</button><input type="file" id="file-stu" accept="image/*" multiple onchange="setImg('.grid-item',this)" style="display:none"></div>
+    </div>
+
+    <!-- 碑帖欣赏 500个位置 -->
+    <div id="beitie" class="page container">
+        <h2 class="section-title">碑帖欣赏（500图位）</h2>
+        <div class="grid-500" id="bbox"></div>
+        <div class="upload-box"><button class="btn" onclick="openAdminBatchUpload('bei')">上传碑帖照片</button><input type="file" id="file-bei" accept="image/*" multiple onchange="setImg('.grid-item',this)" style="display:none"></div>
+    </div>
+
+    <!-- 联系我们 -->
+    <div id="contact" class="page container">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-card">
+            <p>上书书院 SHANGSHUSHUYUAN</p>
+            <p>地址：成都市成华区昭觉寺横路6号</p>
+            <p>电话：132 5817 0509</p>
+            <p>开放时间：9:00-21:00</p>
+        </div>
+    </div>
+
+    <!-- 新增报名页面 -->
+    <div id="signup" class="page container">
+        <h2 class="section-title">报名通道</h2>
+        <div class="signup-form">
+            <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" placeholder="请输入您的姓名" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">联系电话</label>
+                <input type="tel" id="phone" placeholder="请输入您的手机号码" required>
+            </div>
+            <div class="form-group">
+                <label for="course">选择课程</label>
+                <select id="course" required>
+                    <option value="">请选择课程类型</option>
+                    <option value="酣游书史">酣游书史</option>
+                    <option value="书法笔墨">书法笔墨</option>
+                    <option value="文化讲堂">文化讲堂</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">年龄</label>
+                <input type="number" id="age" placeholder="请输入年龄" required>
+            </div>
+            <div class="form-group">
+                <label for="remark">备注信息</label>
+                <textarea id="remark" rows="5" placeholder="请输入您的其他需求或疑问"></textarea>
+            </div>
+            <div class="form-submit">
+                <button class="btn" onclick="submitSignup()">提交报名</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <h3>上书书院 SHANGSHUSHUYUAN</h3>
+        <p>© 2025 上书书院 版权所有｜一笔一划 · 育才成林</p>
+        <p>开发人员：冯意翔</p>
+    </div>
+
+    <script>
+        // 管理员默认密码（可自行修改）
+        const ADMIN_PASSWORD = "admin123";
+        let currentUploadObj = null;
+        let currentUploadType = "";
+
+        // 生成100个学员位置 + 500个碑帖位置
+        function makeBox(el,num){
+            let h = '';
+            for(let i=0;i<num;i++) h+=`<img class="grid-item" onclick="openAdminUpload(this)">`;
+            document.getElementById(el).innerHTML = h;
+        }
+        makeBox('sbox',100);
+        makeBox('bbox',500);
+
+        // 页面切换
+        function show(id){
+            document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        // 打开管理员密码验证弹窗（单张上传）
+        function openAdminUpload(obj) {
+            currentUploadObj = obj;
+            document.getElementById('passwordModal').style.display = 'flex';
+        }
+
+        // 打开管理员密码验证弹窗（批量上传）
+        function openAdminBatchUpload(type = "") {
+            currentUploadType = type;
+            document.getElementById('passwordModal').style.display = 'flex';
+        }
+
+        // 验证管理员密码
+        function checkPassword() {
+            const inputPwd = document.getElementById('adminPwd').value;
+            if (inputPwd === ADMIN_PASSWORD) {
+                // 密码正确，关闭弹窗并执行上传
+                document.getElementById('passwordModal').style.display = 'none';
+                document.getElementById('adminPwd').value = '';
+                
+                if (currentUploadObj) {
+                    // 单张上传
+                    const input = document.createElement('input');
+                    input.type = 'file';
+                    input.accept = 'image/*';
+                    input.onchange = (e) => {
+                        const reader = new FileReader();
+                        reader.onload = () => {
+                            currentUploadObj.src = reader.result;
+                            currentUploadObj = null;
+                        };
+                        reader.readAsDataURL(e.target.files[0]);
+                    };
+                    input.click();
+                } else if (currentUploadType) {
+                    // 批量上传
+                    let fileInputId = '';
+                    if (currentUploadType === 'stu') {
+                        fileInputId = 'file-stu';
+                    } else if (currentUploadType === 'bei') {
+                        fileInputId = 'file-bei';
+                    } else {
+                        fileInputId = 'file-teacher';
+                    }
+                    document.getElementById(fileInputId).click();
+                    currentUploadType = "";
+                }
+            } else {
+                alert('密码错误！请输入正确的管理员密码');
+                document.getElementById('adminPwd').value = '';
+            }
+        }
+
+        // 批量上传图片
+        function setImg(cls,inp){
+            const files = inp.files;
+            const imgs = document.querySelectorAll(cls);
+            for(let i=0;i<files.length;i++){
+                if(i>=imgs.length)break;
+                const reader = new FileReader();
+                reader.onload = (e) => imgs[i].src = e.target.result;
+                reader.readAsDataURL(files[i]);
+            }
+            inp.value = '';
+        }
+
+        // 提交报名表单
+        function submitSignup() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const course = document.getElementById('course').value;
+            const age = document.getElementById('age').value;
+
+            if (!name || !phone || !course || !age) {
+                alert('请填写完整的报名信息！');
+                return;
+            }
+
+            // 模拟提交成功
+            alert(`报名成功！\n姓名：${name}\n电话：${phone}\n课程：${course}\n年龄：${age}\n我们将尽快与您联系！`);
+            
+            // 重置表单
+            document.getElementById('name').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('course').value = '';
+            document.getElementById('age').value = '';
+            document.getElementById('remark').value = '';
+        }
+    </script>
+</body>
+</html>
